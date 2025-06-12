@@ -1,0 +1,10 @@
+<label>Umur: <input id="age2" type="number"></label>
+<button onclick="isTeen()">Cek</button>
+<p id="r8"></p>
+<script>
+function isTeen(){
+  const a = +document.getElementById('age2').value;
+  document.getElementById('r8').textContent =
+    (a >=13 && a<=19) ? 'Remaja' : 'Bukan Remaja';
+}
+</script>

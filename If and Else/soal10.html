@@ -1,0 +1,11 @@
+<label>Text: <input id="txt1"></label>
+<button onclick="isPal()">Cek Palindrome</button>
+<p id="r10"></p>
+<script>
+function isPal(){
+  const s = document.getElementById('txt1').value;
+  const rev = s.split('').reverse().join('');
+  document.getElementById('r10').textContent =
+    (s === rev) ? 'Palindrome' : 'Bukan Palindrome';
+}
+</script>

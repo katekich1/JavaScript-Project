@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Validasi Password</title>
+</head>
+<body>
+    <h1>Validasi Password</h1>
+    <p>Password harus minimal 8 karakter</p>
+    <input type="password" id="passwordInput" placeholder="Masukkan password">
+    <button onclick="validatePassword()">Validasi</button>
+    <p id="passwordResult"></p>
+
+    <script>
+        function validatePassword() {
+            const password = document.getElementById('passwordInput').value;
+            let isValid = false;
+            
+            while (!isValid) {
+                if (password.length >= 8) {
+                    document.getElementById('passwordResult').textContent = "Password valid!";
+                    isValid = true;
+                } else {
+                    document.getElementById('passwordResult').textContent = "Password terlalu pendek!";
+                    break;
+                }
+            }
+        }
+    </script>
+</body>
+</html>

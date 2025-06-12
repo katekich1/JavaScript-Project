@@ -1,0 +1,11 @@
+<label>Harga (Rp): <input id="price" type="number"></label>
+<button onclick="promo()">Cek Promo</button>
+<p id="r15"></p>
+<script>
+function promo(){
+  const p = +document.getElementById('price').value;
+  const disc = p > 100000 ? 0.1 : 0.05;
+  document.getElementById('r15').textContent =
+    `Diskon ${(disc*100).toFixed(0)}% -> Rp ${(p*(1-disc)).toLocaleString()}`;
+}
+</script>

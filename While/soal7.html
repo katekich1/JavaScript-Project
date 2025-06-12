@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pengulangan Kata</title>
+</head>
+<body>
+    <h1>Pengulangan Kata</h1>
+    <input type="text" id="wordInput" placeholder="Masukkan kata">
+    <input type="number" id="repeatInput" placeholder="Jumlah pengulangan">
+    <button onclick="repeatWord()">Ulangi</button>
+    <div id="repeatOutput"></div>
+
+    <script>
+        function repeatWord() {
+            const word = document.getElementById('wordInput').value;
+            const repeat = parseInt(document.getElementById('repeatInput').value);
+            let count = 0;
+            let output = "";
+            
+            while (count < repeat) {
+                output += word + " ";
+                count++;
+            }
+            
+            document.getElementById('repeatOutput').textContent = output;
+        }
+    </script>
+</body>
+</html>

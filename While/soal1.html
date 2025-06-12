@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Penghitung Mundur</title>
+</head>
+<body>
+    <h1>Penghitung Mundur</h1>
+    <p id="countdown"></p>
+
+    <script>
+        let count = 10;
+        while (count >= 0) {
+            setTimeout(() => {
+                document.getElementById('countdown').textContent = count;
+            }, (10 - count) * 1000);
+            count--;
+        }
+    </script>
+</body>
+</html>

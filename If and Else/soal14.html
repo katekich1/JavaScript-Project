@@ -1,0 +1,10 @@
+<label>Password: <input id="pw2" type="password"></label>
+<button onclick="passCheck()">Cek</button>
+<p id="r14"></p>
+<script>
+function passCheck(){
+  const p = document.getElementById('pw2').value;
+  document.getElementById('r14').textContent =
+    p.length >=8 ? 'Seat sudah aman' : 'Password terlalu pendek';
+}
+</script>

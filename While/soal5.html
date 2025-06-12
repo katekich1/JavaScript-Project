@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Deret Fibonacci</title>
+</head>
+<body>
+    <h1>Deret Fibonacci</h1>
+    <input type="number" id="fibInput" placeholder="Jumlah deret">
+    <button onclick="generateFibonacci()">Generate</button>
+    <p id="fibOutput"></p>
+
+    <script>
+        function generateFibonacci() {
+            const n = parseInt(document.getElementById('fibInput').value);
+            let a = 0, b = 1, nextTerm;
+            let count = 1;
+            let output = "";
+            
+            while (count <= n) {
+                output += a + " ";
+                nextTerm = a + b;
+                a = b;
+                b = nextTerm;
+                count++;
+            }
+            
+            document.getElementById('fibOutput').textContent = output;
+        }
+    </script>
+</body>
+</html>

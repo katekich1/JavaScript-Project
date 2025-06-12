@@ -1,0 +1,10 @@
+<label>Password: <input id="pw" type="password"></label>
+<button onclick="checkPw()">Login</button>
+<p id="r5"></p>
+<script>
+function checkPw(){
+  const p = document.getElementById('pw').value;
+  document.getElementById('r5').textContent =
+    (p === 'secret') ? 'Access granted' : 'Access denied';
+}
+</script>

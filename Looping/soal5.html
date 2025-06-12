@@ -1,0 +1,11 @@
+<button onclick="t5()">Segitiga</button><pre id="r5"></pre>
+<script>
+  function t5(){
+    let r="", rows=5;
+    for(let i=1;i<=rows;i++){
+      for(let j=1;j<=i;j++) r+="*";
+      r+="\n";
+    }
+    document.getElementById("r5").textContent = r;
+  }
+</script>

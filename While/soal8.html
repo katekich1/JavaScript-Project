@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Kalkulator Pangkat</title>
+</head>
+<body>
+    <h1>Kalkulator Pangkat</h1>
+    <input type="number" id="baseInput" placeholder="Bilangan dasar">
+    <input type="number" id="exponentInput" placeholder="Pangkat">
+    <button onclick="calculatePower()">Hitung</button>
+    <p id="powerResult"></p>
+
+    <script>
+        function calculatePower() {
+            const base = parseInt(document.getElementById('baseInput').value);
+            const exponent = parseInt(document.getElementById('exponentInput').value);
+            let result = 1;
+            let i = 0;
+            
+            while (i < exponent) {
+                result *= base;
+                i++;
+            }
+            
+            document.getElementById('powerResult').textContent = `${base}^${exponent} = ${result}`;
+        }
+    </script>
+</body>
+</html>

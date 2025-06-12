@@ -1,0 +1,9 @@
+<button onclick="t4()">Buah</button><pre id="r4"></pre>
+<script>
+  const fruits = ['apel','pisang','jeruk'];
+  function t4(){
+    let out="";
+    for (let i = 0; i < fruits.length; i++) out += fruits[i] + "\n";
+    document.getElementById("r4").textContent = out;
+  }
+</script>

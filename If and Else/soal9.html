@@ -1,0 +1,10 @@
+<label>Huruf: <input id="ch" maxlength="1"></label>
+<button onclick="isVowel()">Cek</button>
+<p id="r9"></p>
+<script>
+function isVowel(){
+  const c = document.getElementById('ch').value.toLowerCase();
+  document.getElementById('r9').textContent =
+    'aeiou'.includes(c) ? 'Vokal' : 'Konsonan atau bukan huruf';
+}
+</script>

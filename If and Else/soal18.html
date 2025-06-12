@@ -1,0 +1,9 @@
+<button onclick="greet()">Salam</button>
+<p id="r18"></p>
+<script>
+function greet(){
+  const h = new Date().getHours();
+  let s = h < 12 ? 'Pagi' : h < 18 ? 'Siang' : 'Malam';
+  document.getElementById('r18').textContent = `Selamat ${s}!`;
+}
+</script>

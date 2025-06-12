@@ -1,0 +1,10 @@
+<label>Angka: <input id="num1" type="number"></label>
+<button onclick="checkOddEven()">Cek</button>
+<p id="r1"></p>
+<script>
+function checkOddEven(){
+  const n = +document.getElementById('num1').value;
+  document.getElementById('r1').textContent =
+    (n % 2 === 0) ? 'Genap' : 'Ganjil';
+}
+</script>

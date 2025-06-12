@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simulasi Tabungan</title>
+</head>
+<body>
+    <h1>Simulasi Tabungan Bank</h1>
+    <input type="number" id="initialInput" placeholder="Saldo awal">
+    <input type="number" id="interestInput" placeholder="Bunga (%) per tahun">
+    <input type="number" id="yearsInput" placeholder="Jumlah tahun">
+    <button onclick="calculateSavings()">Hitung</button>
+    <div id="savingsOutput"></div>
+
+    <script>
+        function calculateSavings() {
+            const initial = parseFloat(document.getElementById('initialInput').value);
+            const interest = parseFloat(document.getElementById('interestInput').value) / 100;
+            const years = parseInt(document.getElementById('yearsInput').value);
+            let balance = initial;
+            let year = 1;
+            let output = "<h3>Proyeksi Tabungan:</h3><ul>";
+            
+            while (year <= years) {
+                balance += balance * interest;
+                output += `<li>Tahun ${year}: Rp${balance.toFixed(2)}</li>`;
+                year++;
+            }
+            
+            output += "</ul>";
+            document.getElementById('savingsOutput').innerHTML = output;
+        }
+    </script>
+</body>
+</html>

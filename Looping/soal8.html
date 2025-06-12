@@ -1,0 +1,9 @@
+<button onclick="t8()">Objek</button><pre id="r8"></pre>
+<script>
+  function t8(){
+    const obj = {a:1,b:2,c:3};
+    let out="";
+    for (let k in obj) out += k+"="+obj[k]+"\n";
+    document.getElementById("r8").textContent = out;
+  }
+</script>

@@ -1,0 +1,9 @@
+<button onclick="t1()">Cetak 1–10</button>
+<pre id="r1"></pre>
+<script>
+function t1() {
+  let out = "";
+  for (let i = 1; i <= 10; i++) out += i + "\n";
+  document.getElementById("r1").textContent = out;
+}
+</script>

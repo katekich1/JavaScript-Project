@@ -1,0 +1,10 @@
+<label>Nilai: <input id="s2" type="number"></label>
+<button onclick="lulus()">Cek</button>
+<p id="r13"></p>
+<script>
+function lulus(){
+  const n = +document.getElementById('s2').value;
+  document.getElementById('r13').textContent =
+    n >= 60 ? 'Lulus' : 'Remedial';
+}
+</script>

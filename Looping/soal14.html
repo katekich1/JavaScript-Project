@@ -1,0 +1,11 @@
+<button onclick="t14()">Infinite → stop di 3</button><pre id="r14"></pre>
+<script>
+  function t14(){
+    let r="", i=0;
+    for (;;){
+      if(i>3) break;
+      r+=i+"\n"; i++;
+    }
+    document.getElementById("r14").textContent = r;
+  }
+</script>

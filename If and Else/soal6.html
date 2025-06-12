@@ -1,0 +1,14 @@
+<label>Nilai: <input id="score" type="number"></label>
+<button onclick="grade()">Nilai</button>
+<p id="r6"></p>
+<script>
+function grade(){
+  const s = +document.getElementById('score').value;
+  let res;
+  if(s >= 85) res = 'A';
+  else if (s >= 70) res = 'B';
+  else if (s >= 50) res = 'C';
+  else res = 'D';
+  document.getElementById('r6').textContent = res;
+}
+</script>

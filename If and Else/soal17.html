@@ -1,0 +1,13 @@
+<button onclick="cek()">Cek via prompt</button>
+<script>
+function cek(){
+  const n = +prompt('Masukkan angka:');
+  if(isNaN(n)){
+    alert('Bukan angka!');
+  } else if (n % 2 === 0){
+    alert('Genap');
+  } else {
+    alert('Ganjil');
+  }
+}
+</script>

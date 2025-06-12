@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bilangan Ganjil</title>
+</head>
+<body>
+    <h1>Bilangan Ganjil 1-50</h1>
+    <div id="output"></div>
+
+    <script>
+        let num = 1;
+        const output = document.getElementById('output');
+        
+        while (num <= 50) {
+            if (num % 2 !== 0) {
+                output.innerHTML += num + " ";
+            }
+            num++;
+        }
+    </script>
+</body>
+</html>

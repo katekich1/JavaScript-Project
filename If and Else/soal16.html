@@ -1,0 +1,10 @@
+<label>Warna: <input id="c" type="text"></label>
+<button onclick="favColor()">Cek</button>
+<p id="r16"></p>
+<script>
+function favColor(){
+  const c = document.getElementById('c').value.toLowerCase();
+  document.getElementById('r16').textContent =
+    c === 'biru' ? 'Saya suka juga!' : 'Oke, bagus.';
+}
+</script>

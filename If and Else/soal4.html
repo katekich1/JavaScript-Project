@@ -1,0 +1,10 @@
+<label>Usia: <input id="age" type="number"></label>
+<button onclick="checkAge()">Cek</button>
+<p id="r4"></p>
+<script>
+function checkAge(){
+  const a = +document.getElementById('age').value;
+  document.getElementById('r4').textContent =
+    (a >= 17) ? 'Boleh memilih' : 'Belum boleh memilih';
+}
+</script>

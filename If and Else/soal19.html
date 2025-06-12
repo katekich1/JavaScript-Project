@@ -1,0 +1,9 @@
+<label>Tulis sesuatu: <input id="txt2"></label>
+<button onclick="checkEmpty()">Cek</button>
+<p id="r19"></p>
+<script>
+function checkEmpty(){
+  const t = document.getElementById('txt2').value;
+  document.getElementById('r19').textContent = t ? 'Terisi' : 'Kosong';
+}
+</script>

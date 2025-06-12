@@ -1,0 +1,12 @@
+<label>Role (admin/user/guest): <input id="role"></label>
+<button onclick="who()">Cek</button>
+<p id="r20"></p>
+<script>
+function who(){
+  const r = document.getElementById('role').value.toLowerCase();
+  if(r === 'admin') document.getElementById('r20').textContent = 'Selamat datang Admin';
+  else if(r === 'user') document.getElementById('r20').textContent = 'Halo User';
+  else if(r === 'guest') document.getElementById('r20').textContent = 'Hai Tamu';
+  else document.getElementById('r20').textContent = 'Role tidak dikenal';
+}
+</script>

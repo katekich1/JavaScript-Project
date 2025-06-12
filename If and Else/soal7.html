@@ -1,0 +1,10 @@
+<label>Hari (1–7): <input id="day" type="number"></label>
+<button onclick="checkDay()">Cek</button>
+<p id="r7"></p>
+<script>
+function checkDay(){
+  const d = +document.getElementById('day').value;
+  document.getElementById('r7').textContent =
+    (d >= 1 && d <= 5) ? 'Hari Kerja' : (d === 6 || d === 7) ? 'Akhir Pekan' : 'Input salah';
+}
+</script>

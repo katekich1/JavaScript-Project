@@ -1,0 +1,11 @@
+<button onclick="t15()">Skip 2</button><pre id="r15"></pre>
+<script>
+  function t15(){
+    let r="";
+    for(let i=0;i<5;i++){
+      if(i===2) continue;
+      r+=i+"\n";
+    }
+    document.getElementById("r15").textContent = r;
+  }
+</script>

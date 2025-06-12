@@ -1,0 +1,12 @@
+<button onclick="t20()">Palindrome?</button>
+<input id="inp20" value="radar">
+<p id="r20"></p>
+<script>
+  function check(){
+    const s = document.getElementById("inp20").value;
+    let rev = "";
+    for (let i=s.length-1;i>=0;i--) rev+=s[i];
+    document.getElementById("r20").textContent = (s===rev?"ya":"tidak");
+  }
+  document.querySelector("button").onclick = check;
+</script>

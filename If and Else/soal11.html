@@ -1,0 +1,11 @@
+<label>Bulan (1–12): <input id="m" type="number"></label>
+<button onclick="month()">Bulan</button>
+<p id="r11"></p>
+<script>
+function month(){
+  const m = +document.getElementById('m').value;
+  const mo = ['Jan','Feb','Mar','Apr','Mei','Jun','Jul','Agu','Sep','Okt','Nov','Des'];
+  document.getElementById('r11').textContent =
+    (m>=1 && m<=12) ? mo[m-1] : 'Input salah';
+}
+</script>

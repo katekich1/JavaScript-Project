@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Kalkulator Faktorial</title>
+</head>
+<body>
+    <h1>Kalkulator Faktorial</h1>
+    <input type="number" id="numberInput" placeholder="Masukkan angka">
+    <button onclick="calculateFactorial()">Hitung</button>
+    <p id="result"></p>
+
+    <script>
+        function calculateFactorial() {
+            const num = parseInt(document.getElementById('numberInput').value);
+            let factorial = 1;
+            let i = 1;
+            
+            while (i <= num) {
+                factorial *= i;
+                i++;
+            }
+            
+            document.getElementById('result').textContent = `Faktorial dari ${num} adalah ${factorial}`;
+        }
+    </script>
+</body>
+</html>

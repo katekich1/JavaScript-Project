@@ -1,0 +1,13 @@
+<label>Angka: <input id="num2" type="number"></label>
+<button onclick="checkSign()">Cek</button>
+<p id="r2"></p>
+<script>
+function checkSign(){
+  const n = +document.getElementById('num2').value;
+  let res;
+  if (n > 0) res = 'Positif';
+  else if (n < 0) res = 'Negatif';
+  else res = 'Nol';
+  document.getElementById('r2').textContent = res;
+}
+</script>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tebak Angka</title>
+</head>
+<body>
+    <h1>Tebak Angka (1-100)</h1>
+    <input type="number" id="guessInput" placeholder="Masukkan tebakan">
+    <button onclick="checkGuess()">Cek</button>
+    <p id="hint"></p>
+
+    <script>
+        const secretNumber = Math.floor(Math.random() * 100) + 1;
+        let attempts = 0;
+        
+        function checkGuess() {
+            const guess = parseInt(document.getElementById('guessInput').value);
+            attempts++;
+            
+            while (true) {
+                if (guess === secretNumber) {
+                    document.getElementById('hint').textContent = `Selamat! Anda menebak dengan benar dalam ${attempts} percobaan.`;
+                    break;
+                } else if (guess < secretNumber) {
+                    document.getElementById('hint').textContent = "Terlalu rendah, coba lagi!";
+                    break;
+                } else {
+                    document.getElementById('hint').textContent = "Terlalu tinggi, coba lagi!";
+                    break;
+                }
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+<label>Berat(kg):<input id="w" type="number"></label>
+<label>Tinggi(cm):<input id="h" type="number"></label>
+<button onclick="bmi()">Cek BMI</button>
+<p id="r12"></p>
+<script>
+function bmi(){
+  const w = +document.getElementById('w').value;
+  const h = +document.getElementById('h').value / 100;
+  const v = w / (h*h);
+  let s = v < 18.5 ? 'Kurus' : v < 25 ? 'Normal' : 'Gemuk';
+  document.getElementById('r12').textContent = `BMI=${v.toFixed(1)}, ${s}`;
+}
+</script>
